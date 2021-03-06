@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$dark-cyan: hsl(185, 75%, 39%);
+$dark-blue: hsl(229, 23%, 23%);
+$gray-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+$light-gray: hsl(0, 0%, 90%);
+$violet: hsl(228, 45%, 44%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(255, 100%, 100%);
+
+html {
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans';
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  .profile-card {
+    min-height: 100vh;
+    background-color: $dark-cyan;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+      width: 80%;
+      background-color: $white;
+      border-radius: 10px;
+      z-index: 10;
+
+      .info {
+        text-align: center;
+
+        .images img {
+          &:first-child {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+          }
+
+          &:nth-child(2) {
+            margin-top: -55px;
+            padding: 5px;
+            border-radius: 50%;
+            background-color: $white;
+          }
+        }
+
+        .user {
+          padding: 10px 10px;
+
+          p {
+            padding: 5px 0;
+            color: $gray-blue;
+          }
+
+          .username {
+            font-weight: bold;
+            color: $black;
+          }
+        }
+      }
+
+      .divider {
+        margin: 10px 0;
+        border: 1px solid $light-gray;
+      }
+
+      .social-media {
+        display: flex;
+        padding: 20px 10px;
+        justify-content: space-around;
+
+        div {
+          text-align: center;
+
+          p {
+            &:first-child {
+              font-weight: bold;
+              margin-bottom: 8px;
+            }
+
+            &:nth-child(2) {
+              font-size: 11px;
+              color: $gray-blue;
+            }
+          }
+        }
+      }
+    }
+
+    .top-bg,
+    .bottom-bg {
+      position: absolute;
+      width: 65vw;
+      height: 50vh;
+    }
+
+    .top-bg {
+      top: 0;
+      left: 0;
+      background: url('./images/bg-pattern-top.svg') no-repeat bottom right;
+    }
+
+    .bottom-bg {
+      bottom: 0;
+      right: 0;
+      background: url('./images/bg-pattern-bottom.svg') no-repeat top left;
+    }
+  }
+}
+
+footer {
+  margin-top: 25px;
+  text-align: center;
+
+  .attribution {
+    font-size: 11px;
+
+    a {
+      color: $violet;
+    }
+  }
+}
