@@ -72,11 +72,43 @@ main .profile-card .content .social-media div p:nth-child(2) {
   font-size: 11px;
   color: #6a6f81;
 }
+@media (min-width: 576px) {
+  main .profile-card .content {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  main .profile-card .content {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  main .profile-card .content {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  main .profile-card .content {
+    width: 30%;
+  }
+}
+@media (min-width: 1440px) {
+  main .profile-card .content {
+    width: 25%;
+  }
+}
 main .profile-card .top-bg,
 main .profile-card .bottom-bg {
   position: absolute;
   width: 65vw;
   height: 50vh;
+}
+@media (min-width: 992px) {
+  main .profile-card .top-bg,
+main .profile-card .bottom-bg {
+    width: 50vw;
+    height: 50vh;
+  }
 }
 main .profile-card .top-bg {
   top: 0;
@@ -87,16 +119,6 @@ main .profile-card .bottom-bg {
   bottom: 0;
   right: 0;
   background: url("./images/bg-pattern-bottom.svg") no-repeat top left;
-}
-@media (min-width: 1440px) {
-  main .profile-card .content {
-    width: 25%;
-  }
-  main .profile-card .top-bg,
-main .profile-card .bottom-bg {
-    width: 50vw;
-    height: 50vh;
-  }
 }
 
 footer {
